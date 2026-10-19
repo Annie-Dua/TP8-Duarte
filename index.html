@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conductores y Vehículos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Registro</h1>
+
+    <h2>Conductor</h2>
+
+    <form>
+        <label for="nombreC">Nombre:</label>
+        <input type="text" id="nombreC">
+
+        <br><br>
+
+        <label for="edadC">Edad:</label>
+        <input type="number" id="edadC">
+
+        <br><br>
+
+        <label for="carnetC">Tipo de carnet:</label>
+        <select id="carnetC">
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+        </select>
+
+        <br><br>
+
+        <label for="seguroC">Tiene seguro?</label>
+        <select id="seguroC">
+            <option value="SI">SI</option>
+            <option value="NO">NO</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" onclick="guardarConductor()">guardar conductor</button>
+    </form>
+
+
+    <hr>
+
+    <h2>vehículos</h2>
+
+    <form>
+        <label for="marcaV">Marca:</label>
+        <input type="text" id="marcaV" >
+
+        <br><br>
+
+        <label for="modeloV">Modelo:</label>
+        <input type="text" id="modeloV" >
+
+        <br><br>
+
+        <label for="patenteV">Patente:</label>
+        <input type="text" id="patenteV">
+
+        <br><br>
+
+        <label for="tipoV">Tipo de vehículo:</label>
+        <select id="tipoV">
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" onclick="guardarVehiculo()">
+            Guardar vehículo
+        </button>
+    </form>
+
+
+    <hr>
+
+    <h2>Filtros</h2>
+
+    <h3>Filtrar por tipo de carnet y vehículo</h3>
+
+    <button type="button" onclick="filtrar_A1()">Filtrar A1</button>
+    <button type="button" onclick="filtrar_A2()">Filtrar A2</button>
+    <button type="button" onclick="filtrar_A3()">Filtrar A3</button>
+
+    <h3>Filtrar por seguro</h3>
+
+    <button type="button" onclick="filtrar_seguro_si()">
+        Con seguro
+    </button>
+
+    <button type="button" onclick="filtrar_seguro_no()">
+        Sin seguro
+    </button>
+
+    <h3>Filtrar por marca</h3>
+
+    <button type="button" onclick="filtrar_marca()">
+        Buscar por marca
+    </button>
+
+    <h3>Mostrar todos</h3>
+
+    <button type="button" onclick="mostrarConductores()">
+        Mostrar todos los conductores
+    </button>
+
+    <button type="button" onclick="mostrarVehiculos()">
+        Mostrar todos los vehículos
+    </button>
+
+
+    <hr>
+
+    <h2>Resultado de conductores</h2>
+
+    <div id="listaConductores"></div>
+
+
+    <h2>Resultado de vehículos</h2>
+
+    <div id="listaVehiculos"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
